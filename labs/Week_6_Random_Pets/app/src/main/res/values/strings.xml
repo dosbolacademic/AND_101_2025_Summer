@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Week_6_Lab_Random_Pets_part1</string>
+    <string name="app_name">Random Pet</string>
+    <string name="doggy">A cute dog</string>
+    <string name="button_x">Get a random pet!</string>
 </resources>
