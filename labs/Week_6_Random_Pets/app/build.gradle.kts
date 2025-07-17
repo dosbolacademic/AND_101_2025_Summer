@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.week_6_lab_random_pets_part1"
+    namespace = "com.example.week_6_random_pet_lab"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.week_6_lab_random_pets_part1"
+        applicationId = "com.example.week_6_random_pet_lab"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -45,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.codepath.libraries:asynchttpclient:2.2.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 }
