@@ -7,13 +7,79 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pet Random App"
+        android:textColor="@android:color/white"
+        android:background="@color/design_default_color_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"/>
+
+
+
+    <ImageView
+        android:id="@+id/petImage"
+        android:src="@drawable/doggy"
+        android:layout_height="400dp"
+        android:layout_width="400dp"
+        android:contentDescription="@string/doggy"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintBottom_toTopOf="@+id/petButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/petButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/button_x"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#6200EE"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/petImage"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_marginTop="32dp"
+         />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/footer_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <!-- Your Footer TextView -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:text="Copyright ©2025 Dosbol Aliev"
+    android:textColor="@android:color/black"
+    android:background="#00FFFF"
+    android:textSize="12sp"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@+id/footer_guideline"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    android:padding="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
